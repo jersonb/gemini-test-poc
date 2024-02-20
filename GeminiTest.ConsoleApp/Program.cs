@@ -88,8 +88,7 @@ static async Task<string> GetSchema(NpgsqlConnection connection)
     table_schema
     FROM 
     information_schema.columns 
-    where table_schema ='aula'
-");
+    where table_schema ='aula' ");
 
     var schema = await connection.QueryFirstAsync<string>(selectSchema);
     return schema;
